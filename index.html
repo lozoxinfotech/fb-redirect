@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Shocking Viral Post" />
-  <meta property="og:description" content="You won't believe this! Click to see now." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just a Moment...</title>
+
+  <!-- FB Link Preview Cloaking -->
+  <meta property="og:title" content="Breaking News Update" />
+  <meta property="og:description" content="You won't believe what just happened. Watch now!" />
   <meta property="og:image" content="https://i.imgur.com/8RKXAIV.jpeg" />
-  <meta property="og:url" content="https://your-vercel-link.vercel.app" />
+  <meta property="og:url" content="https://your-vercel-page.vercel.app" />
+
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
-      padding-top: 50px;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      visibility: hidden; /* 👈 hides "Redirecting..." text */
     }
   </style>
+
   <script>
-    // Instant redirect (no delay)
-    var adsterraLink = "https://webhook.site/f9251eac-b868-4e58-a6ab-b45e47f048cb";
-    var a = document.createElement("a");
-    a.href = adsterraLink;
-    a.rel = "noreferrer noopener";
-    a.target = "_self";
-    document.body.appendChild(a);
-    a.click();
+    document.addEventListener("DOMContentLoaded", function () {
+      // Your Adsterra Direct Link
+      var adsterraLink = "https://www.profitableratecpm.com/yf25ujqtp?key=10e71f5539d82ebc81aa8f08b24ec344";
+
+      // Create <a> with cloaking attributes
+      var link = document.createElement("a");
+      link.href = adsterraLink;
+      link.rel = "noreferrer noopener";
+      link.target = "_self";
+
+      // Auto click
+      document.body.appendChild(link);
+      link.click();
+    });
   </script>
 </head>
-<body style="visibility: hidden;">
-  <h2>Redirecting...</h2>
-  <p>Please wait...</p>
+<body>
+  <p>Redirecting...</p>
 </body>
 </html>
